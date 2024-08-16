@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#002855">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Halaman Kontak</title>
+  <style>
+  @import url('../files/css/animation/progress-bar.css');
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      font-family: Arial, sans-serif;
+      padding: 50px 20px 20px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      color: black;
+    }
+    h1, h2, h3, h4, h5, h6, strong{
+      color: #002855;
+    }
+    p{
+      line-height: 1.5rem;
+    }
+    a{
+      text-decoration: none;
+      color: #1e71cf;
+    }
+    ul, ol{
+      padding-left: 20px;
+    }
+    ul li, ol li{
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #002855;
+      color: white;
+      max-width: 480px;
+      width: 100%;
+      height: 50px;
+      padding: 0 1rem;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    header .name h1{
+      font-size: 1em;
+      margin: 0;
+      color: white;
+      font-weight: 400;
+    }
+    .contact{
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .contact h2{
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body><div id="progress-container"><div id="progress-bar"></div></div>
+  <header>
+    <div class="back"></div>
+    <div class="name">
+      <h1>Kontak App KasirKu</h1>
+    </div>
+  </header>
+  <div class="contact">
+    <h2>Kontak Admin</h2>
+    <p>Terkait penggunaan App KasirKu, pengguna dapat langsung menghubungi Admin melalui kontak yang tersedia di bawah.</p>
+    <ul>
+      <li>Email: <a href="mailto:app.kasirku@gmail.com">app.kasirku@gmail.com</a></li>
+      <li>WhatsApp: <a href="https://api.whatsapp.com/send?phone=628816849129">+62 881 6849 129</a></li>
+    </ul>
+    <p>Anda juga dapat menelusuri halaman terkait deskripsi atau detail penjelasan tentang aplikasi App KasirKu, <a href="description.html">klik disini</a>.</p>
+  </div>
+  <script type="module">
+    import {initializeProgressBar} from '../files/modules/utils.js';
+    import {arrowLeft} from '../files/modules/icons/icon.js';
+    document.addEventListener('DOMContentLoaded', function(){
+      // progress bar
+      initializeProgressBar();
+      const buttonBack = document.querySelector('.back');
+      buttonBack.innerHTML = arrowLeft(20, 20, 'white');
+      buttonBack.onclick = () => {
+        window.history.back();
+      }
+    });
+  </script>
+</body>
+</html>

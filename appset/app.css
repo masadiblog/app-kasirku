@@ -1,0 +1,106 @@
+@import url('../files/css/alert/alert-box.css');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Sans-Serif;
+}
+form{
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
+  padding: .5rem;
+}
+form h5{
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+form label{
+  font-weight: 400;
+}
+form input,
+form textarea{
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 .5rem;
+  margin: .25rem 0;
+  width: 100%;
+}
+form textarea{
+  min-height: 50px;
+  height: auto;
+  display: block;
+  padding: .5rem;
+}
+form textarea.full{
+  max-height: 65vh;
+  height: 100vh;
+}
+form input::placeholder,
+form textarea::placeholder{
+  font-family: Monospace;
+}
+form input:focus,
+form textarea:focus{
+  outline-color: #92c7f8;
+}
+form input.failed,
+form textarea.failed{
+  border-color: brown;
+  color: brown;
+  outline-color: brown;
+}
+form button{
+  height: 35px;
+  padding: 0 .75rem;
+  display: inline-block;
+  align-items: center;
+  color: white;
+  margin-left: .25rem;
+  border-radius: 2px;
+}
+form button:active{
+  opacity: .8;
+  border-radius: 3px;
+}
+form button[type=button]{
+  background-color: #888;
+  border-color: #888;
+}
+form button[type=reset]{
+  background-color: #7c6909;
+  border-color: #7c6909;
+}
+form button[type=submit]{
+  background-color: #4ca6f9;
+  border-color: #4ca6f9;
+}
+.container{
+  padding: .25rem;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+.row{
+  position: relative;
+  margin-bottom: 1rem;
+}
+.col{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.err{
+  color: brown;
+  font-size: .85em;
+}
+.text-end{
+  text-align: right;
+}
+@media(min-width: 481px){
+  body{
+    display: none;
+    opacity: 0;
+  }
+}

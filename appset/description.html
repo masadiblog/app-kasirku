@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#002855">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Deskripsi Produk - KasirKu</title>
+  <style>
+    @import url('../files/css/animation/progress-bar.css');
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      font-family: Arial, sans-serif;
+      padding: 50px 20px 20px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+      color: black;
+    }
+    h1, h2, h3, h4, h5, h6, strong{
+      color: #002855;
+    }
+    p{
+      line-height: 1.5rem;
+    }
+    a{
+      text-decoration: none;
+      color: #1e71cf;
+    }
+    ul, ol{
+      padding-left: 20px;
+      margin: .5rem auto;
+    }
+    ul li, ol li{
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+      color: #051749;
+    }
+    ul li ul li, ol li ul li{
+      margin-bottom: .5rem;
+      font-size: .95em;
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #002855;
+      color: white;
+      max-width: 480px;
+      width: 100%;
+      height: 50px;
+      padding: 0 1rem;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+    }
+    header .name h1{
+      font-size: 1em;
+      margin: 0;
+      color: white;
+      font-weight: 400;
+    }
+    .product{
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .product h2{
+      margin-top: 0;
+    }
+    #backToTop{
+      position: fixed;
+      height: 0;
+      z-index: 100;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: lime;
+      max-width: 480px;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+    #backToTop button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      padding: 0 0 0 3px;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      margin-right: 40px;
+      margin-bottom: 60px;
+      background-color: rgba(0,40,85,.65);
+    }
+  </style>
+</head><div id="progress-container"><div id="progress-bar"></div></div>
+<body>
+  <header>
+    <div class="back"></div>
+    <div class="name">
+      <h1>Tentang App KasirKu</h1>
+    </div>
+  </header>
+  <div class="product">
+    <h2>Navigasi <span id="arrowBottom"></span></h2>
+    <ol>
+      <li><a href="#deskripsi-aplikasi">Deskripsi Aplikasi</a></li>
+      <li><a href="#fitur-apa-saja">Fitur Apa Saja</a></li>
+      <li><a href="#fitur-dasar">Fitur Dasar</a></li>
+      <li><a href="#fitur-berlangganan">Fitur Berlanggan</a></li>
+      <li><a href="#cara-berlangganan">Cara Berlanggan</a></li>
+      <li><a href="#proses-input-produk">Proses Input Produk</a></li>
+      <li><a href="#edit-produk">Edit Produk</a></li>
+      <li><a href="#hapus-produk">Hapus Produk</a></li>
+      <li><a href="#pencarian-produk">Pencarian Produk</a></li>
+      <li><a href="#proses-input-transaksi">Proses Input Transaksi</a></li>
+      <li><a href="#edit-transaksi">Edit Transaksi</a></li>
+      <li><a href="#hapus-transaksi">Hapus Transaksi</a></li>
+      <li><a href="#batalkan-transaksi">Batalkan Transaksi</a></li>
+      <li><a href="#pencarian-transaksi">Pencarian Transaksi</a></li>
+      <li><a href="#penjualan-harian">Penjualan Harian</a></li>
+      <li><a href="#cara-penggunaan">Cara Penggunaan</a></li>
+      <li><a href="#cara-buat-akun">Cara Buat Akun</a></li>
+      <li><a href="#cara-ganti-password">Cara Ganti Password</a></li>
+      <li><a href="#fitur-tambahan">Fitur Tambahkan</a></li>
+    </ol>
+    <hr>
+    <div id="deskripsi-aplikasi">
+      <h3>Deskripsi Aplikasi</h3> 
+      <p>Paket dasar App KasirKu menyediakan solusi kasir digital yang mudah digunakan untuk usaha kecil dan menengah. Fitur-fitur utama termasuk:</p>
+      <ul>
+        <li>Pengelolaan stok barang</li>
+        <li>Pencatatan penjualan harian</li>
+        <li>Laporan keuangan otomatis</li>
+        <!--<li>Integrasi dengan pembayaran digital (GoPay, Bank Transfer)</li>-->
+      </ul>
+      <p>Khusus pengguna baru yang baru menggunakan App KasirKu, dapat memanfaatkan masa percobaan (gratis). Berlaku pada bulan pertama dan terhitung sejak akun Anda berhasil terdaftar di App KasirKu.</p>
+    </div>
+    <hr>
+    <div id="fitur-apa-saja">
+      <h3>Semua Fitur</h3>
+      <ul>
+        <li><strong>Buat akun</strong></li>
+        <li><strong>Lupa password</strong></li>
+        <li><strong>Login</strong></li>
+        <li><strong>Dashboard</strong>
+          <ol>
+            <li><strong>Produk</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-10px">Pada bagian ini (tab produk) Anda dapat mengelola data produk dengan beberapa fitur berikut.</li>
+                <li>Form input produk</li>
+                <li>Tombol scan barcode</li>
+                <li>Tombol edit produk</li>
+                <li>Tombol hapus produk</li>
+                <li>Kolom pencarian produk</li>
+              </ul>
+            </li>
+            <li><strong>Toko</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-10px">Pada bagian ini (tab toko) Anda dapat memperbarui data toko sesuai kolom yang tersedia seperti berikut.</li>
+                <li><strong>Nama Toko:</strong> Masukkan atau perbarui nama toko.</li>
+                <li><strong>WhatsApp Toko:</strong> Masukkan atau perbarui nomor WhatsApp toko.</li>
+                <li><strong>Alamat Toko:</strong> Masukkan atau perbarui alamat toko.</li>
+                <li><strong>Catatan Toko:</strong> Masukkan atau perbarui catatan toko.</li>
+              </ul>
+            </li>
+            <li><strong>Akun</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-10px">Pada bagian ini (tab akun) Anda dapat mengelola akun Anda seperti memperbarui beberapa data berikut.</li>
+                <li>Nama</li>
+                <li>Username</li>
+                <li>Password</li>
+              </ul>
+            </li>
+            <li><strong>Kontak Admin</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-10px">Pada bagian ini (tab kontak admin) Anda dapat menghubungi atau mengirim pesan ke admin melalui form yang tersedia.</li>
+                <li><strong>Email:</strong> Untuk mengirim pesan email ke admin melalui form email yang tersedia.</li>
+                <li><strong>WhatsApp:</strong> Untuk mengirim pesan WhatsApp ke admin melalui form yang tersedia.</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+        <li><strong>Kasir</strong>
+          <ol>
+            <li><strong>Form transaksi</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-10px">Input transaksi manual via form dengan memasukkan nama/kode produk pada bagian kolom nama/kode.</li>
+                <li>Nama</li>
+                <li>Kode</li>
+                <li>Harga</li>
+                <li>Jumlah</li>
+                <li>Diskon</li>
+              </ul>
+            </li>
+            <li><strong>Scan barcode</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-20px">Input transaksi secara otomatis hanya dengan fitur scan barcode. Scan kode produk otomatis akan masuk ke tabel transaksi.</li>
+              </ul>
+            </li>
+            <li><strong>Pembayaran</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-20px">Anda dapat memproses pembayaran untuk setiap transaksi yang diinginkan.</li>
+              </ul>
+            </li>
+            <li><strong>Cetak struk</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-20px">Cetak struk untuk setiap transaksi yang diinginkan pada setiap kali Anda melakukan proses pembayaran.</li>
+              </ul>
+            </li>
+            <li><strong>Edit transaksi</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-20px">Anda dapat merubah data transaksi saat ini berdasarkan item, dengan cara klik tombol atau ikon edit.</li>
+              </ul>
+            </li>
+            <li><strong>Hapus transaksi</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-20px">Anda dapat menghapus data transaksi saat ini berdasarkan item, dengan cara klik tombol atau ikon hapus.</li>
+              </ul>
+            </li>
+            <li><strong>Batalkan transaksi</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-20px">Anda dapat membatalkan seluruh data transaksi saat ini berdasarkan nomor faktur/transaksi, dengan cara klik tombol {&times; Transaksi}.</li>
+              </ul>
+            </li>
+            <li><strong>Pencarian</strong>
+              <ul>
+                <li style="list-style:none;margin-left:-20px">Anda dapat mencari data transaksi berdasarkan nomor faktur/transaksi, dengan cara klik ikon cari dan masukkan nomor faktur/transaksi pada kolom input.</li>
+              </ul>
+            </li>
+            <li><strong>Menu navigasi</strong>
+              <ul>
+                <li>Penjualan</li>
+                <li>Pengeluaran</li>
+                <li>Panduan</li>
+                <li>Berlangganan</li>
+                <li>Dashboard</li>
+                <li>Logout</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div id="fitur-dasar">
+      <h3>Fitur Dasar</h3>
+      <ol>
+        <li>Input produk</li>
+        <li>Edit produk</li>
+        <li>Hapus produk</li>
+        <li>Pencarian produk</li>
+        <li>Input transaksi</li>
+        <li>Proses pembayaran</li>
+        <li>Edit transaksi</li>
+        <li>Hapus transaksi</li>
+        <li>Batalkan transaksi</li>
+      </ol>
+    </div>
+    <hr>
+    <div id="fitur-berlangganan">
+      <h3>Fitur Berlanggan</h3>
+      <ol>
+        <li>Scan barcode transaksi</li>
+        <li>Cetak struk</li>
+        <li>Pencarian transaksi</li>
+        <li>Data penjualan</li>
+      </ol>
+    </div>
+    <hr>
+    <div id="cara-berlangganan">
+      <h3>Cara Berlangganan</h3>
+      <p>Supaya dapat terus menikmati semua fitur yang tersedia, Anda dapat berlangganan atau memperpanjang masa langganan.</p>
+      <p>Jika masa percobaan atau masa langganan telah habis, maka beberapa fitur akan dibatasi. Anda tidak dapat mengaksesnya hingga masa berlanggan diperpanjang.</p>
+      <p>Anda dapat memperpanjang masa berlangganan dengan mengikuti langkah-langkah berikut.</p>
+      <ul>
+        <li><strong>Via Notifikasi</strong>
+          <ul>
+            <li style="list-style:none;margin-left:-10px">Anda dapat memperpanjang masa berlangganan pada notifikasi yang muncul ketika setiap kali Anda mengakses fitur berlangganan.</li>
+            <li>Pada notifikasi yang muncul Anda pilih dan klik tombol "Ya, Perpanjang" untuk melanjutkan proses.</li>
+          </ul>
+        </li>
+        <li><strong>Via Menu</strong>
+          <ul>
+            <li style="list-style:none;margin-left:-10px">Anda dapa memperpanjang masa berlangganan pada bagian menu.</li>
+            <li>Buka bagian menu</li>
+            <li>Klik berlangganan</li>
+            <li>Klik "Ya, Perpanjang"</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div id="proses-input-produk">
+      <h3>Cara Input Produk</h3>
+      <p>Untuk proses input produk silakan Anda ikuti langkah-langkah berikut.</p>
+      <ol>
+        <li><strong>Login</strong>
+          <ul>
+            <li style="list-style:none;margin-left:-20px">Silakan login dengan username dan password Anda.</li>
+          </ul>
+        </li>
+        <li><strong>Menu</strong>
+          <ul>
+            <li style="list-style:none;margin-left:-20px">Pada halaman kasir silakan buka menu, tombol menu terdapat dibagian paling bawah.</li>
+            <li style="list-style:none;margin-left:-20px">Setelah menu terbuka, pilih dan klik pada pilihan "Dashboard".</li>
+          </ul>
+        </li>
+        <li><strong>Dashboard</strong>
+          <ul>
+            <li style="list-style:none;margin-left:-20px">Pada halaman dashboard silakan Anda buka bagian tab produk, klik tombol buka.</li>
+          </ul>
+        </li>
+        <li><strong>Tab Input Produk</strong>
+          <ul>
+            <li style="list-style:none;margin-left:-20px">Pada bagian input produk, silan Anda masukkan data produk Anda pada form input sesuai dengan masing-masing kolomnya.
+              <ul>
+                <li><strong>Kode:</strong> Masukkan kode produk, atau jika produk terdapat kode barcode gunakan fitur scan barcode.</li>
+                <li><strong>Nama:</strong> Masukkan detail nama produk.</li>
+                <li><strong>Modal:</strong> Masukkan harga modal produk.</li>
+                <li><strong>Harga:</strong> Masukkan harga jual produk.</li>
+                <li><strong>Stok:</strong> Masukkan jumlah stok produk.</li>
+              </ul>
+            </li>
+            <li style="list-style:none;margin-left:-20px">Dan pada bagian ini (tab produk) Anda juga dapat mengedit atau menghapus data produk.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <hr>
+    <div id="proses-input-transaksi">
+      <h3>Cara Input Transaksi</h3>
+      <p>Untuk proses input transaksi silakan Anda ikuti langkah-langkah berikut.</p>
+      <ol>
+        <li><strong>Login</strong>
+          <ul>
+            <li style="list-style:none;margin-left:-20px">Silakan login dengan username dan password Anda.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <hr>
+    <div id="cara-penggunaan">
+      <h3>Cara Penggunaan</h3>
+      <ol>
+        <li>Daftar dan buat akun di App KasirKu.</li>
+        <li>Tambahkan produk dan stok barang melalui dashboard.</li>
+        <li>Mulai mencatat penjualan harian menggunakan aplikasi.</li>
+        <li>Akses laporan keuangan dan kelola bisnis Anda dengan mudah.</li>
+      </ol>
+    </div>
+    <hr>
+    <div id="fitur-tambahan">
+      <h3>Fitur Tambahan</h3>
+      <ul>
+        <li><strong>Gratis penggunaan</strong>
+          <ul>
+            <li>Anda dapat menggunakan App KasirKu secara gratis selama satu bulan pertama, terhitung sejak akun Anda berhasil terdaftar dan aktif.</li>
+          </ul>
+        </li>
+        <li><strong>Dukungan pelanggan</strong>
+          <ul style="font-family:monospace">
+            <li><span style="text-decoration:line-through;text-decoration-color:#c62222">Minggu</span></li>
+            <li>Senin = 09.00 - 17.00</li>
+            <li>Selasa = 09.00 - 17.00</li>
+            <li>Rabu = 09.00 - 17.00</li>
+            <li>Kamis = 09.00 - 17.00</li>
+            <li><span style="text-decoration:line-through;text-decoration-color:#c62222">Jum'at</span></li>
+            <li>Sabtu = 09.00 - 17.00</li>
+          </ul>
+        </li>
+        <li><strong>Pembaruan sistem</strong>
+          <ul>
+            <li>Sistem akan terus diperbarui secara berkala demi peforma dan kenyamanan penggunaan.</li>
+          </ul>
+        </li>
+        <li><strong>Training penggunaan</strong>
+          <ul>
+            <li>Pengguna baru yang tidak/belum mengerti tetang bagaimana cara menggunakan App KasirKu akan dibimbing sampai bisa.</li>
+            <li>Pengguna akan dibimbing via chat WhatsApp. Nomor kontak WhatsApp bisa ditemukan pada halaman <a href="contact.html">kontak admin</a>.</li>
+            <li>Dalam proses...</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <p>Anda juga dapat menelusuri halaman terkait kontak admin App KasirKu, <a href="contact.html">klik disini</a>.</p>
+  </div>
+  <div id="backToTop">
+    <button type="button" id="buttonBackToTop"></button>
+  </div>
+  <script type="module">
+    import {initializeProgressBar} from '../files/modules/utils.js';
+    import {arrowLeft, arrowBottom, arrowTop} from '../files/modules/icons/icon.js';
+    document.addEventListener('DOMContentLoaded', function(){
+      // progress bar
+      initializeProgressBar();
+      const buttonBack = document.querySelector('.back');
+      buttonBack.innerHTML = arrowLeft(20, 20, 'white');
+      buttonBack.onclick = () => {
+        window.history.back();
+      }
+      const arrowDown = document.querySelector('#arrowBottom');
+      arrowDown.innerHTML = '&nbsp;&nbsp;' + arrowBottom(null, null, 'black');
+      const buttonBackToTop = document.querySelector('#buttonBackToTop');
+      buttonBackToTop.innerHTML = arrowTop(18, 18, 'white');
+      buttonBackToTop.onclick = (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+      document.querySelectorAll('a[href^="#"]').forEach(achor => {
+        achor.addEventListener('click', function(e){
+          e.preventDefault();
+          const targetElement = document.querySelector(this.getAttribute('href'));
+          const headerOffset = document.querySelector('header').offsetHeight + 10;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
