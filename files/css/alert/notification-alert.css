@@ -1,0 +1,57 @@
+/* notification alert */
+#notification_alert{
+  position: fixed;
+  max-width: 480px;
+  width: 100%;
+  padding: .5rem;
+  border-radius: 0;
+  box-shadow: 0 1px 0 1px transparent;
+  background-color: transparent;
+  color: white;
+  font-size: .9em;
+  font-family: Sans-Serif;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 1s ease-in-out;
+  z-index: 1000;
+}
+#notification_alert #close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.25);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.35);
+  border-radius: 2px;
+  font-size: 1.25em;
+  color: #ccc;
+  width: 22px;
+  height: 22px;
+  z-index: 1;
+}
+#notification_alert #close:hover{
+  background-color: rgba(0,0,0,.5);
+  color: #aaa;
+}
+#notification_alert.show{
+  top: 0;
+}
+#notification_alert.show.success{
+  background-color: #24b024;
+  box-shadow: 0 1px 0 1px #24b024;
+}
+#notification_alert.show.info{
+  background-color: #249bb0;
+  box-shadow: 0 1px 0 1px #249bb0;
+}
+#notification_alert.show.warning{
+  background-color: #b08224;
+  box-shadow: 0 1px 0 1px #b08224;
+}
+#notification_alert.show.danger{
+  background-color: #ce3939;
+  box-shadow: 0 1px 0 1px #ce3939;
+}

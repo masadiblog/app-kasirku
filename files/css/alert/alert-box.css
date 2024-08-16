@@ -1,0 +1,100 @@
+#alert_box{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  max-width: 480px;
+  width: 100%;
+  background-color: rgba(0,40,85,.25);
+  transform: translateX(-50%);
+  z-index: -1000;
+}
+#alert_box.show{
+  z-index: 1000;
+}
+#alert_box #box_alert{
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,40,85,.05), 3px 3px 8px 1px rgba(0,40,85,.5), 0 0 5px 1px rgba(0,40,85,.05);
+  max-width: 480px;
+  width: 85%;
+  height: auto;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform .3s linear;
+  margin: 20vh auto auto;
+}
+@keyframes scale{
+  from{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.035);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+#alert_box #box_alert.scale{
+  animation: scale .3s linear;
+}
+#alert_box #title_box{
+  border-bottom: 1px solid #002855;
+  background-color: rgba(0,40,85,.75);
+  border-radius: 6px 6px 0 0;
+}
+#alert_box #alert_title{
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+  padding: .65rem .25rem .5rem;
+  font-family: Georgia;
+}
+#alert_box #data_box{
+  border-bottom: 1px solid rgba(0,40,85,.25);
+  padding: 1.5rem 1rem;
+  font-family: Sans-Serif;
+  max-height: 35vh;
+  position: relative;
+  overflow-y: scroll;
+}
+#alert_box #alert_subtitle{
+  margin-bottom: .5rem;
+  font-size: 1.1em;
+  color: rgba(0,40,85,.85);
+  font-weight: 500;
+}
+#alert_box #alert_text{
+  color: #333;
+  font-size: 1em;
+  line-height: 1.15rem;
+}
+#alert_box #alert_text p{
+  margin-bottom: .35rem;
+}
+#alert_box #button_box{
+  text-align: right;
+  padding: 1rem;
+}
+#alert_box #button_close{
+  padding: .3rem .5rem;
+  border-color: #ccc;
+  border-radius: 2px;
+  background-color: #ccc;
+  color: #555;
+  font-size: 1em;
+}
+#alert_box #button_close:active{
+  background-color: #aaa;
+  border-style: solid;
+  border-color: #9a9a9a;
+}
+#alert_box #button_execute{
+  margin-left: .5rem;
+  padding: .3rem .5rem;
+  border-color: rgba(0,40,85,.3);
+  border-radius: 2px;
+  background-color: rgba(0,40,85,.75);
+  color: white;
+  font-size: 1em;
+}
