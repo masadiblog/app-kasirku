@@ -1,0 +1,55 @@
+#boxFormEditItem{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  max-width: 480px;
+  width: 100%;
+  background-color: rgba(0,40,85,.25);
+  transform: translateX(-50%);
+  z-index: -100;
+}
+#boxFormEditItem.show{
+  z-index: 100;
+}
+#boxFormEditItem form{
+  background-color: white;
+  width: 85%;
+  margin: 20vh auto auto;
+  padding: 0;
+  font-family: Georgia;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0,40,85,.05), 3px 3px 8px 1px rgba(0,40,85,.5), 0 0 5px 1px rgba(0,40,85,.05);
+  border: 0;
+  transform: scale(1);
+  transition: transform .3s linear;
+  margin: 20vh auto auto;
+}
+@keyframes scale{
+  from{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.035);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+#boxFormEditItem form.scale{
+  animation: scale .3s linear;
+}
+#boxFormEditItem form h5{
+  font-size: 1.15em;
+  font-family: Georgia;
+  margin-bottom: 1rem;
+  padding: .65rem 1rem .5rem;
+  background-color: rgba(0,40,85,.75);
+  color: white;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+#boxFormEditItem form .row{
+  padding: 0 1rem 1rem;
+  margin: 0!important;
+}
