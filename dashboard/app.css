@@ -1,0 +1,727 @@
+@import url('../files/css/classed/index.css');
+@import url('../files/css/alert/alert-box.css');
+@import url('../files/css/alert/notification-alert.css');
+@import url('../files/css/import/style-form-update-item.css');
+@import url('../files/css/animation/progress-bar.css');
+@import url('../files/css/animation/loader.css');
+@import url('../files/css/animation/tooltip.css');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+body{
+  font-size: 14px;
+  background-color: white;
+  font-family: Sans-Serif;
+}
+form{
+  background-color: white;
+  padding: .5em;
+}
+form h5{
+  font-size: 1em;
+  color: rgba(0,40,85,.75);
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .25rem;
+}
+form input,
+form textarea{
+  font-family: Sans-Serif;
+  border: 0;
+  outline: solid 3px transparent;
+  box-shadow: 0 0 0 1px #ccc;
+  padding: .5rem;
+  border-radius: 2px;
+  display: block;
+  margin: .25rem 0;
+  width: 100%;
+  transition: box-shadow .05s ease-in-out;
+}
+form input:focus,
+form textarea:focus{
+  box-shadow: 0 0 0 1px rgba(0,153,255,.25);
+  outline-color: rgba(0,153,255,.25);
+}
+form input::placeholder,
+form textarea::placeholder{
+  font-family: Monospace;
+  font-size: .9em;
+}
+form input[readonly]{
+  background-color: #f7f7f7;
+  box-shadow: 0 0 0 1px #ccc;
+}
+form .row span{
+  position: absolute;
+  top: 1.275rem;
+  right: 0;
+  background-color: #eee;
+  border-radius: 0 2px 2px 0;
+  font-size: .9em;
+  border-left: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 35px;
+}
+form .row span.active{
+  background-color: #ddd;
+}
+form input.failed,
+form textarea.failed{
+  box-shadow: 0 0 0 1px rgba(255,0,0,.25);
+  outline-color: rgba(255,0,0,.25);
+}
+form button{
+  border-width: 2px;
+  padding: .35rem .55rem;
+  border-radius: 2px;
+  color: #555;
+  background-color: #ccc;
+  border-color: #ccc;
+}
+form button:active{
+  transform: scale(.975);
+}
+form button[type=reset]{
+  background-color: #907a61;
+  color: white;
+  border-color: #907a61;
+}
+form button[type=submit]{
+  background-color: rgba(0,40,85,.75);
+  color: white;
+  border-color: rgba(0,40,85,.25);
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+table tbody tr{
+  background-color: rgba(0,40,85,.05);
+}
+table tbody tr:nth-child(even){
+  background-color: rgba(0,40,85,.1);
+}
+table tbody tr:hover{
+  background-color: rgba(0,40,85,.15);
+}
+table thead tr{
+  background-color: #405e80;
+  color: white;
+}
+table tr th,
+table tr td{
+  padding: 5px;
+}
+table tr th#thStore,
+table tr td#tdStore{
+  text-align: left!important;
+}
+table tr th#thSold,
+table tr td#tdSold,
+table tr th#thNumber,
+table tr th#thStatus,
+table tr td#tdNumber,
+table tr td#tdStatus{
+  text-align: center!important;
+}
+table tr th#thPrice,
+table tr td#tdPrice,
+table tr th#thSale,
+table tr td#tdSale,
+table tr th#thExpen,
+table tr td#tdExpen,
+table tr th#thDiscount,
+table tr td#tdDiscount,
+table tr th#thProfit,
+table tr td#tdProfit,
+table tr th#thAction,
+table tr td#tdAction{
+  text-align: right!important;
+}
+table tr td#tdAction{
+  font-weight: bold;
+  color: #405e80;
+}
+table tr td#tdAction:hover{
+  color: red;
+}
+#tableDetail{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 480px;
+  width: 100%;
+  background-color: white;
+  padding-top: 1rem;
+  z-index: 1;
+}
+#tableDetail #footer{
+  display: flex;
+  justify-content: end;
+  padding: 1rem .5rem;
+}
+#tableDetail #footer button{
+  padding: 5px 8px;
+  border-radius: 3px;
+  border-color: #ccc;
+  background-color: #ccc;
+}
+#tableDetail #footer #updateButton{
+  margin-left: .5rem;
+  background-color: #405e80;
+  color: white;
+  border-color: #405e80;
+}
+.row .col .date,
+.row .col .month,
+.row .col .year{
+  width: 100%;
+}
+.row .col #date,
+.row .col #month,
+.row .col #year{
+  width: 100%;
+  padding: 7px 5px;
+  font-family: Monospace;
+}
+#titleTable{
+  text-align: left;
+  padding: 5px;
+  text-transform: capitalize;
+  color: #002855;
+  font-family: Georgia;
+}
+#analityc{
+  font-family: Sans-Serif;
+  width: 100%;
+  position: relative;
+  border-collapse: collapse;
+}
+#analityc thead tr{
+  background-color: #405e80;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+#tableBox.max-height-83{
+  max-height: 83vh;
+}
+#analityc tfoot{
+  background-color: #405e80;
+  color: white;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+}
+#analityc tfoot tr td{
+  padding: 8px 5px;
+  font-weight: bold;
+}
+#analityc tfoot tr td:nth-child(1){
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+}
+#analityc tfoot tr td:nth-child(2){
+  position: sticky;
+  right: 0;
+  z-index: 1;
+  text-align: right;
+}
+#analityc thead tr th:nth-child(1),
+#analityc tbody tr td:nth-child(1){
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+#analityc thead tr th:last-child,
+#analityc tbody tr td:last-child{
+  position: sticky;
+  right: 0;
+  z-index: 1;
+}
+#analityc thead tr th{
+  padding: 5px;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+  background-color: #405e80;
+}
+#analityc thead tr #thNumber,
+#analityc thead tr #thSale{
+  text-align: center;
+}
+#analityc thead tr #thTotal{
+  text-align: right;
+}
+#analityc thead tr #thPercent{
+  text-align: right;
+}
+#analityc tbody tr:nth-child(even){
+  background-color: #e6ecf2;
+}
+#analityc tbody tr{
+  background-color: white;
+}
+#analityc tbody tr td{
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 10px;
+}
+#analityc tbody tr td:nth-child(1){
+  text-align: center;
+}
+#analityc tbody tr:nth-child(even) td:nth-child(1),
+#analityc tbody tr:nth-child(even) td:last-child{
+  background-color: #e6ecf2;
+}
+#analityc tbody tr td:nth-child(1),
+#analityc tbody tr td:last-child{
+  background-color: white;
+}
+#analityc tbody tr #tdSale{
+  text-align: center;
+}
+#analityc tbody tr #tdTotal,
+#analityc tbody tr #tdPercent{
+  text-align: right;
+}
+#analityc tbody #tdSold,
+#analityc tbody #tdPrice,
+#analityc tbody #tdSale,
+#analityc tbody #tdExpen,
+#analityc tbody #tdDiscount,
+#analityc tbody #tdProfit,
+#analityc tbody #tdPercent,
+#analityc tfoot #saleInt,
+#analityc tfoot #discountInt,
+#analityc tfoot #expenInt,
+#analityc tfoot #profitInt{
+  font-family: Monospace;
+}
+/* toolbar */
+.toolbar{
+  position: sticky;
+  top: 0;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 100;
+}
+.toolbar .bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002855;
+  padding: .5rem;
+  height: 35px;
+}
+.toolbar .bar .title{
+  color: white;
+  font-family: Sans-Serif;
+  text-transform: capitalize;
+}
+.toolbar .bar button{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  width: 30px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+/* cards */
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: .25rem;
+  background-color: transparent;
+}
+.card{
+  position: relative;
+  overflow: hidden;
+  width: 47.5%;
+  padding: .5rem;
+  color: #444;
+  font-family: Sans-Serif;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255,255,255);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.05), 1px 1px 1px 0 rgba(0,0,0,.1), 0 4px 8px 1px rgba(0,0,0,.15);
+  transition: box-shadow .25s;
+}
+.card:hover{
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+}
+.card-header{
+  padding-bottom: .5rem;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.card-header .title{
+  font-size: 1em;
+  font-family: Georgia;
+}
+.card-body{
+  position: relative;
+  font-size: .95em;
+  padding: .5rem 0;
+  flex-grow: 1;
+}
+.card-body img{
+  width: 100%;
+  display: block;
+}
+.card-body p{
+  position: relative;
+  margin-bottom: .5rem;
+  overflow: hidden;
+  font-size: .9em;
+  line-height: 1.15rem;
+}
+.card-body p:last-child{
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.card-body p:last-child::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 16px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .75));
+}
+.card-footer{
+  color: #555;
+  padding-top: .5rem;
+  border-top: 1px solid rgba(0,0,0,.1);
+  gap: .15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-footer button{
+  height: 22px;
+  letter-spacing: .035rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to top right, rgba(0,0,0,.25), rgba(0,0,0,0), rgba(0,0,0,.25));
+  border: 1px solid gray;
+  color: #444;
+  border-radius: 20px;
+  font-size: .7em;
+  padding: 0 .5rem;
+}
+.card-footer button:active{
+  background-color: #b3b0b0;
+  border-color: transparent;
+}
+#viewBox{
+  position: fixed;
+  top: 35px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -100;
+  visibility: hidden;
+  overflow: hidden;
+  max-width: 480px;
+  width: 100%;
+  padding: 0 0 .5rem;
+  background-color: white;
+}
+#viewBox.show{
+  z-index: 100;
+  visibility: visible;
+}
+#viewBox #box{
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: .25rem;
+}
+#viewBox #data{
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+}
+/* form input product */
+#formInputProduct{
+  padding: 0 .35rem .5rem;
+  margin: -.75rem 0 0;
+}
+#formInputProduct .col-name{
+  width: 92%;
+}
+#formInputProduct .col-capital,
+#formInputProduct .col-price{
+  width: 100%;
+}
+#formInputProduct input,
+#formSearchProduct input{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 .25rem;
+  margin: .25rem 0;
+  outline: 2px solid transparent;
+  border: 1px solid #333;
+  border-radius: 3px;
+  box-shadow: none;
+}
+#formInputProduct input:focus,
+#formSearchProduct input:focus{
+  caret-color: rgba(64,167,198,1);
+  border-radius: 2px;
+  border-color: rgba(64,167,198,.75);
+  outline-color: rgba(64,167,198,.25);
+}
+#formInputProduct input.failed{
+  border-color: red;
+  outline-color: rgba(255,0,0,.25);
+}
+#formInputProduct button{
+  height: 30px;
+  padding: 0 .5rem;
+}
+/* form search product */
+#formSearchProduct{
+  position: absolute;
+  width: 55%;
+  z-index: 1;
+  top: -42px;
+  padding: 0 .375rem;
+  display: flex;
+  align-items: center;
+}
+#formSearchProduct input{
+  background-color: rgba(0,40,85,.75);
+  color: white;
+}
+#formSearchProduct input::placeholder{
+  color: white;
+}
+#formSearchProduct input:focus::placeholder{
+  color: #555;
+}
+#formSearchProduct input:focus{
+  background-color: white;
+  outline-color: rgba(0,0,0,.25);
+  border-color: #555;
+  color: black;
+}
+/* table product */
+#tableBox{
+  max-height: 69vh;
+  max-width: 480px;
+  width: 98%;
+  margin: 0 auto;
+  position: relative;
+  overflow: scroll;
+  border: 3px solid rgba(0,40,85,.75);
+}
+#tableBox::-webkit-scrollbar{
+  display: none;
+}
+#tableProduct{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+#tableProduct thead{
+  position: sticky;
+  top: 0;
+}
+#tableProduct th{
+  background-color: #405e80;
+  color: white;
+  font-size: .85em;
+  font-weight: 500;
+  padding: 0 .25rem;
+  height: 26px;
+}
+#tableProduct tbody tr{
+  font-size: .85em;
+  background-color: #f1f1f1;
+}
+#tableProduct tbody tr:nth-child(even){
+  background-color: #ccc;
+}
+#tableProduct td{
+  padding: .5rem .25rem;
+  font-family: Sans-Serif;
+  font-size: 1em;
+}
+#tableProduct td#capital,
+#tableProduct td#price,
+#tableProduct td#stock{
+  font-family: Monospace;
+  letter-spacing: -1px;
+}
+#tableProduct td#no,
+#tableProduct td#stock,
+#tableProduct td#edit,
+#tableProduct td#delt{
+  text-align: center;
+}
+#tableProduct td#name{
+  text-align: left;
+}
+#tableProduct td#capital,
+#tableProduct td#price{
+  text-align: right;
+}
+/* form edit */
+#box-form-edit{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  max-width: 480px;
+  width: 100%;
+  background-color: rgba(0,40,85,.25);
+  transform: translateX(-50%);
+  z-index: -100;
+}
+#box-form-edit.show{
+  z-index: 100;
+}
+#box-form-edit form{
+  width: 90%;
+  margin: 15vh auto auto;
+  padding: 1rem 1rem .5rem;
+  border-radius: 5px;
+}
+#box-form-edit form .row{
+  margin: 1rem 0!important;
+}
+#box-form-edit form .row:last-child{
+  text-align: right;
+}
+#box-form-edit form input.failed{
+  border-color: red;
+}
+#box-form-edit form button{
+  margin-left: .5rem;
+}
+/* scan barcode */
+#scanBox{
+  max-width: 480px;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background-color: white;
+  margin-top: -203px;
+  transition: margin-top .25s linear;
+}
+#scanBox.active{
+  height: 203px;
+  margin-top: 0;
+}
+#scanBox video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: white;
+}
+#scanBox #detectorBox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 70%;
+  z-index: 10;
+  border: 5px solid white;
+  transform: translate(-50%, -50%);
+}
+#scanBox.active #detectorBox{
+  border-color: white;
+}
+#scanBox.active #detectorBox.scanning{
+  animation: scanning .25s infinite;
+}
+@keyframes scanning{
+  0%, 100%{
+    border-color: lime;
+  }
+  50%{
+    border-color: white;
+  }
+}
+#buttonRow{
+  position: relative;
+  top: 17px;
+  width: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 10;
+}
+#buttonRow button{
+  background-color: rgba(0,40,85,.75);
+  border-color: rgba(0,40,85,.25);
+  color: white;
+  height: 23px;
+  border-radius: 3px;
+  opacity: 0;
+  display: none;
+  padding: 0 .5rem;
+  width: auto;
+}
+#buttonRow button:active{
+  border-style: inset;
+}
+#buttonRow button#start.active{
+  opacity: 1;
+  display: block;
+}
+#buttonRow button#stop.active{
+  opacity: 1;
+  display: block;
+}
+/* develope */
+#devBox{
+  background-color: white;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+#devBox form{
+  margin-bottom: 20px;
+}
+#devBox form .col{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
