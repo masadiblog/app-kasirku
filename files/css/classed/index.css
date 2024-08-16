@@ -1,0 +1,28 @@
+@import url('./width.css');
+@import url('./height.css');
+@import url('./padding.css');
+@import url('./margin.css');
+@import url('./text.css');
+@import url('./backgroud.css');
+.container{
+  position: relative;
+  padding: .5rem;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+.row{
+  position: relative;
+}
+.col{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  position: relative;
+}
+.err{
+  color: maroon;
+  font-size: .9em;
+  min-height: 15px;
+}

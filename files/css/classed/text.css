@@ -1,0 +1,38 @@
+/* text align */
+.ta-center{
+  text-align: center;
+}
+.ta-left{
+  text-align: left;
+}
+.ta-right{
+  text-align: right;
+}
+/* text color */
+.tc-white{
+  color: white;
+}
+.tc-gray{
+  color: gray;
+}
+.tc-black{
+  color: black;
+}
+.tc-orange{
+  color: orange;
+}
+.tc-red{
+  color: red;
+}
+.tc-brown{
+  color: brown;
+}
+.tc-maroon{
+  color: maroon;
+}
+.tc-green{
+  color: green;
+}
+.tc-blue{
+  color: #00c8ff;
+}
