@@ -1,0 +1,86 @@
+#scanBox{
+  max-width: 480px;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background-color: white;
+  margin-top: -203px;
+  transition: margin-top .25s linear;
+}
+#scanBox.active{
+  height: 203px;
+  margin-top: 0;
+}
+#scanBox video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  object-fit: cover;
+  background-color: white;
+}
+#scanBox.active video{
+  height: 100%;
+}
+#scanBox #detectorBox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 70%;
+  z-index: 10;
+  border: 5px solid white;
+  transform: translate(-50%, -50%);
+}
+#scanBox.active #detectorBox{
+  border-color: white;
+}
+#scanBox.active #detectorBox.scanning{
+  animation: scanning .25s infinite;
+}
+@keyframes scanning{
+  0%, 100%{
+    border-color: lime;
+  }
+  50%{
+    border-color: white;
+  }
+}
+#buttonRow{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 0;
+  position: relative;
+}
+#buttonRow button{
+  position: absolute;
+  top: .2rem;
+  right: -.25rem;
+  background-color: #002855;
+  border: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-radius: 3px;
+  color: white;
+  outline-style: none!important;
+  opacity: 0;
+  padding: .25rem .35rem .15rem!important;
+  box-shadow: none!important;
+  display: none;
+  z-index: 1;
+}
+#buttonRow button#start.active{
+  opacity: 1;
+  z-index: 2;
+  display: block;
+}
+#buttonRow button#stop.active{
+  opacity: 1;
+  z-index: 3;
+  display: block;
+}
