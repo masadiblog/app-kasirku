@@ -1,0 +1,145 @@
+#loaderBox{
+  position: absolute;
+  max-width: 480px;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: -1000;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%);
+  background-color: black;
+  font-family: Monospace;
+  transition: all .5s ease-in-out;
+}
+#loaderBox.active{
+  z-index: 1000;
+  visibility: visible;
+  opacity: 1;
+}
+#loaderBox #loaderTitle{
+  text-align: center;
+  color: white;
+  font-weight: 650;
+  font-size: 1.15em;
+  background-color: transparent;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
+  width: 100%;
+}
+#loaderBox #loader{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  border: 4px double white;
+  border-radius: 75px;
+  padding: 10px;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loader 2.75s linear infinite;
+}
+#loaderBox #loader::before,
+#loaderBox #loader::after{
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  border: 4px double white;
+  border-radius: 50%;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loaderBox #loader::before{
+  width: 30px;
+  height: 50px;
+}
+#loaderBox #loader::after{
+  width: 50px;
+  height: 30px;
+}
+#loaderBox #loaderText{
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 300px;
+  width: 100%;
+}
+@keyframes loader{
+  from{
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* spinner */
+.spinner, .spincam, .spincampro{
+  border: 6px solid rgba(0,40,85,.25);
+  animation: spin 1s linear infinite;
+  border-left-color: rgba(0,40,85,.75);
+  background-color: rgba(225,225,225,.5);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: block;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+.spincam{
+  top: 10%!important;
+}
+.spincampro{
+  top: 16%!important;
+}
+@keyframes spin{
+  0%{
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100%{
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+/* screen */
+.screen-loader{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 1000;
+  transform: translateX(-50%);
+  max-width: 480px;
+  width: 100%;
+  background-color: #002855;
+  display: block;
+  opacity: 1;
+}
+.screen-loader.remove{
+  animation: remove 1s linear;
+}
+@keyframes remove{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}

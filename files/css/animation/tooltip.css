@@ -1,0 +1,40 @@
+#tooltipBox{
+  display: inline;
+  cursor: help;
+}
+#tooltipBox #tooltipText{
+  max-width: 90%;
+  width: auto;
+  background-color: #444;
+  color: white;
+  text-align: left;
+  font-size: .8em;
+  font-family: Sans-Serif;
+  border-radius: 6px;
+  padding: .5rem;
+  margin-bottom: -2px;
+  position: absolute;
+  z-index: 10;
+  bottom: 100%;
+  left: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s;
+}
+#tooltipBox #tooltipText.label{
+  margin-bottom: -20px;
+}
+#tooltipBox #tooltipText::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  margin-left: -7px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #444 transparent transparent transparent;
+}
+#tooltipBox.active #tooltipText{
+  visibility: visible;
+  opacity: 1;
+}
