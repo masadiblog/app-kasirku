@@ -106,3 +106,6 @@ App KasirKu - Aplikasi kasir dan manajemen toko.
       </ol>
     </li>
   </ol>
+<div>
+  <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/ss-app-kasirku.jpg"/>
+</div>
