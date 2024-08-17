@@ -2,7 +2,7 @@
 App KasirKu - Aplikasi kasir dan manajemen toko.
 
 <div>
-  <img src="https://kasirku.atakana.com/files/img/icon-512x512.png"/>
+  <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/icon-512x512.png"/>
 </div>
 
 <h2>{ Fitur }</h2>
