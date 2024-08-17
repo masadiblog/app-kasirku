@@ -107,7 +107,7 @@ App KasirKu - Aplikasi kasir dan manajemen toko.
     </li>
   </ol>
 <div>
-  <img src="../files/img/ss/ksweb-acode.jpg"/>
+  <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/ksweb-acode.jpg"/>
 </div>
 <h2>{ Peralatan }</h2>
   <ol>
