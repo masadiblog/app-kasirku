@@ -109,7 +109,7 @@ App KasirKu - Aplikasi kasir dan manajemen toko.
 <div>
   <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/ksweb-acode.jpg"/>
 </div>
-<h2>{ Peralatan }</h2>
+<h2>{ Alat Tempur }</h2>
   <ol>
     <li>Android<br>• Oppo F9 sebagai perangkat kerja</li>
     <li>Acode<br>• Sebagai text editor</li>
@@ -120,7 +120,11 @@ App KasirKu - Aplikasi kasir dan manajemen toko.
     <li>JavaScript { murni }</li>
     <li>PHP { native }</li>
   </ol>
-<h3>Preview Tampilan</h3>
+<h3>Tampilan Kasir</h3>
 <div>
   <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/ss-app-kasirku.jpg"/>
+</div>
+<h3>Hasil Cetak</h3>
+<div>
+  <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/hasil-cetak-struk.jpg"/>
 </div>
