@@ -292,32 +292,6 @@ function speak(text){
 // end speak
 
 // format number
-/*
-function format_number(number){
-  if(typeof number === 'number'){
-    number = number.toString();
-  }
-  let parts = number.split('.');
-  let mainPart = parts[0].replace(/[^0-9]/g, '');
-  let decimalPart = parts[1] ? parts[1].replace(/[^0-9]/g, '') : '';
-  let length = mainPart.length % 3;
-  let subint = mainPart.substr(0, length);
-  let match = mainPart.substr(length).match(/\d{3}/g);
-  if(match){
-    let separator = length ? '.' : '';
-    subint += separator + match.join('.');
-  }
-  if(decimalPart !== ''){
-    decimalPart = decimalPart.replace(/0+$/, '');
-    if(decimalPart === ''){
-      return subint;
-    }else{
-      return subint + ',' + decimalPart;
-    }
-  }
-  return subint;
-};
-*/
 function format_number(number) {
   let isNegative = false;
   
