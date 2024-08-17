@@ -1,4 +1,4 @@
-# app-kasirku
+<h1>App KasirKu</h1>
 App KasirKu - Aplikasi kasir dan manajemen toko.
 
 <div>
