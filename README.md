@@ -124,6 +124,10 @@ App KasirKu - Aplikasi kasir dan manajemen toko.
 <div>
   <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/ss-app-kasirku.jpg"/>
 </div>
+<h3>Printer RPP02N</h3>
+<div>
+  <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/printer-thermal-vsc-rpp02n.jpg"/>
+</div>
 <h3>Hasil Cetak</h3>
 <div>
   <img src="https://raw.githubusercontent.com/masadiblog/app-kasirku/main/files/img/hasil-cetak-struk.jpg"/>
